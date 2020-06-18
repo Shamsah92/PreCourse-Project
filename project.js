@@ -19,7 +19,11 @@
  * sumOdds([3, 7, 8, 15, 2, 1, 13]) -> 39
  */
 function sumOdds(numbers) {
-  // Your code here
+  let sumOdds = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 1) sumOdds = numbers[i] + sumOdds;
+  }
+  return sumOdds;
 }
 
 /**
@@ -35,7 +39,12 @@ function sumOdds(numbers) {
  * Hint: Use string methods to make it case-insensitive
  */
 function characterCount(string, c) {
-  // Your code here
+  let count = 0;
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === c) count = count + 1;
+    string = string.toLowerCase();
+  }
+  return count;
 }
 
 /**
@@ -54,7 +63,12 @@ function characterCount(string, c) {
  * differences([11, 35, 52, 14, 56]) -> [24,  17, -38,  42]
  */
 function differences(numbers) {
-  // Your code here
+  let answer = [];
+  let dNum = 0;
+  for (let i = 0; i < numbers.length - 1; i++) {
+    if ((dNum = numbers[i++] - numbers[i])) answer.push(dNum);
+  }
+  return answer;
 }
 
 /**
@@ -74,7 +88,9 @@ function differences(numbers) {
  * largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]) -> 545
  */
 function largestIncrement(numbers) {
-  // Your code here
+  let num = []
+  let larger = []
+  for (let i = 0; i < numbers.length; i++)
 }
 
 /**
@@ -89,7 +105,10 @@ function largestIncrement(numbers) {
  * afterX([11, 35, 52, 14, 56, 601, 777, 888, 999], 52) -> [14, 56, 601, 777, 888, 999]
  */
 function afterX(numbers, x) {
-  // Your code here
+  let num = []
+  let larger = []
+  for (let i = 0; i < numbers.length; i++)
+
 }
 
 /**
@@ -150,8 +169,8 @@ function reverseString(string) {
 }
 
 // console.log(sumOdds([3, 7, 8, 15, 2, 1, 13]));
-// console.log(characterCount("Character Count is clever", "c"));
-// console.log(differences([11, 35, 52, 14, 56]));
+//console.log(characterCount("Character Count is clever", "c"));
+//console.log(differences([11, 35, 52, 14, 56]));
 // console.log(largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]));
 // console.log(afterX([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
 // console.log(abbreviate("miss", "Stephane"));
@@ -162,7 +181,7 @@ function reverseString(string) {
 module.exports = {
   sumOdds,
   characterCount,
-  differences,
+  // differences,
   largestIncrement,
   afterX,
   abbreviate,
